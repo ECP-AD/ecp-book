@@ -8,6 +8,7 @@ raw/
 *.aux
 *.bbl
 *.blg
+*.idx
 *.fdb_latexmk
 *.fls
 *.glg
