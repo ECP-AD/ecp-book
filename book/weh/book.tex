@@ -1,0 +1,106 @@
+\documentclass[graybox,envcountchap,sectrefs]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage{fancybox}
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tocloft}
+
+\usepackage[singlelinecheck=yes]{caption}
+\usepackage{framed}
+
+\usepackage{array}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT for %NAME% - DO NOT DISTRIBUTE}
+%\SetWatermarkScale{0.2}
+
+\usepackage{enumitem}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+\usepackage{appendix}
+\usepackage[authoryear]{natbib}
+\bibpunct{[}{]}{,}{n}{}{}
+\usepackage{listings}
+%\usepackage[usenames]{color}
+\usepackage{url}
+\include{macros}
+
+\renewcommand{\cftmarktoc}{%
+  \markboth{\contentsname}{\contentsname}}
+%\renewcommand*{\contentsname}{Table of Contents}
+
+\widowpenalty=3000
+\clubpenalty=3000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\author{William E. Hart \and AUTHOR2 \and AUTHOR3}
+\title{THE BOOK TITLE HERE}
+\subtitle{SUBTITLE HERE]
+\maketitle
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{dedic}
+\include{preface}
+\include{acknow}
+
+
+\setlength{\cftsubsecnumwidth}{4em}
+\tableofcontents
+
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{intro-ch}
+
+\part{PART 1 TITLE}
+
+\include{chapter1-ch}
+
+\include{chapter2-ch}
+
+
+\part{PART 2 TITLE}
+
+\include{chapter3-ch} 
+
+\include{chapter4-ch}
+
+\appendix
+
+\include{appendix1-ch}
+
+
+% Creat a bibliography in a separate "Chapter"
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plainnat}
+\renewcommand{\bibsection}{}
+\bibliography{pyomo}
+
+\printindex
+
+\end{document}
