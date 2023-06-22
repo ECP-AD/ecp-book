@@ -1,0 +1,67 @@
+\documentclass[krantz2]{krantz} %See documentation for other class options
+%\usepackage{fixltx2e,fix-cm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage{multicol}
+
+%\usepackage[breaklinks]{hyperref}
+
+\makeindex
+
+\include{preamble} %place custom commands and macros here
+
+\begin{document}
+
+\frontmatter
+
+\halftitle{Main Title}{Standard blurb goes here}%%Placeholder for Half title
+
+\seriespg{Series page goes here (if applicable); otherwise blank}%%Comment this line if series page not available
+
+\title{Book Title} %This is a placeholder titlepage, it will not be final.
+%%
+\subtitle{Subtitle for the book (if Any)}
+
+\edition{First Edition}
+
+\author{Author Name(s)}%%Used for authored book
+
+\editor{Editor Name(s)}%%Used for Edited book
+
+
+\maketitle
+
+%%%Placeholder for front matter
+
+
+%\booktitle{}{}%%Place holder for author
+
+\locpage
+
+\include{frontmatter/dedication}
+\cleardoublepage
+\setcounter{page}{7} %previous pages will be reserved for frontmatter to be added in later.
+\tableofcontents
+\include{frontmatter/foreword}
+\include{frontmatter/preface}
+\include{frontmatter/author}
+%%\listoffigures
+%%\listoftables
+\include{frontmatter/contributors}
+%\include{frontmatter/symbollist}
+
+\mainmatter
+
+\part{This is What a Part Would Look Like}
+\include{chapters/chapter1/ch1}
+%\include{chapters/chapter2/ch2}
+
+\bibliographystyle{plain}
+\bibliography{bibtex_example}
+
+\printindex
+
+\end{document}
